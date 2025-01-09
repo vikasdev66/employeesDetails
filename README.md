@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-Deployed Link:
+[Deployed Link](https://employees-details-ten.vercel.app/)
 
 ## Bonus Functionalities Implemented
 
