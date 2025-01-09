@@ -1,0 +1,80 @@
+.sidebar {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: var(--primary-color);
+  color: #fff;
+  transition: width 0.3s;
+
+  .logo {
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 20px;
+  }
+
+  .collapse-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 0;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    transition: transform 0.2s;
+  }
+
+  .ant-menu {
+    background: transparent;
+    color: #fff;
+
+    .ant-menu-item {
+      display: flex;
+      font-size: 16px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+      padding: 12px 24px;
+      transition: background-color 0.2s, color 0.2s;
+
+      // Hover state for menu items
+      &:hover,
+      &.ant-menu-item-selected {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #ffffff; // Text color on hover
+
+        .ant-menu-item-icon {
+          color: #ffffff; // Icon color on hover
+        }
+      }
+
+      a {
+        color: inherit;
+        transition: color 0.2s;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .ant-menu-item-icon {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9); // Default icon color
+
+      // Change icon color when the parent menu item is hovered
+      .ant-menu-item:hover & {
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+}

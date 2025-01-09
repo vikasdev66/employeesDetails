@@ -1,0 +1,57 @@
+.dashboard-content {
+  padding: 24px;
+  background-color: var(--layout-color);
+
+  .dashboard-header {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .stat-card {
+    width: 20%;
+    background-color: #fafafa;
+    text-align: center;
+  }
+
+  .dashboard-charts {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+
+    .chart-card {
+      flex: 1;
+      height: 550px;
+      max-width: 50%;
+      background-color: var(--background-color);
+      color: var(--text-color)
+    }
+  }
+
+  .dashboard-stats {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+
+    .stats-panel,
+    .projects-panel,
+    .orders-panel {
+      flex: 1;
+      padding: 16px;
+      background-color: var(--background-color);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .dashboard-header {
+      flex-direction: column;
+    }
+
+    .dashboard-charts {
+      flex-direction: column;
+      .chart-card {
+        max-width: 100%;
+      }
+    }
+  }
+}
